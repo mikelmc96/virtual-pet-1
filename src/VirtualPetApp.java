@@ -36,9 +36,9 @@ public class VirtualPetApp {
 				System.out.println(myPet.dangerZone());
 				break;
 			case "4":
-				myPet.medicine();
+				myPet.bathe();
 				myPet.tick();
-				System.out.println("Now " + myPet.name + " is feeling better.");
+				System.out.println("Now " + myPet.name + " is so fresh and so clean!");
 				System.out.println(myPet.dangerZone());
 			case "5":
 				myPet.tick();
