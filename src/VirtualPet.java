@@ -7,7 +7,7 @@ public class VirtualPet {
 	int hunger = 10;
 	int energy = 10;
 	int hygiene = 10;
-	String [] exclamatoryMessage = {"Great job!", "Excellent!", "Fantastic!", "Right on!", "Alright!"};
+	String[] exclamatoryMessage = { "Great job!", "Excellent!", "Fantastic!", "Right on!", "Alright!" };
 
 	public String showMenu() {
 		return "What would you like to do? \n\tPress 1 to play with " + name + "\n\tPress 2 to feed " + name
@@ -25,7 +25,7 @@ public class VirtualPet {
 	public void play() {
 		interest += 5;
 		energy -= 3;
-		hygiene -=1;
+		hygiene -= 1;
 	}
 
 	public void feed() {
@@ -38,7 +38,7 @@ public class VirtualPet {
 		energy += 10;
 		interest -= 3;
 		hunger -= 3;
-		hygiene -=1;
+		hygiene -= 1;
 	}
 
 	public void bathe() {
@@ -49,8 +49,8 @@ public class VirtualPet {
 	}
 
 	public String showStatus() {
-		return "\t" + name + "'s interest:  " + interest + "\n\t" + name + "'s satiety: " + hunger
-				+ "\n\t" + name + "'s energy level is " + energy + "\n\t" + name + "'s hygiene: " + hygiene;
+		return "\t" + name + "'s interest:  " + interest + "\n\t" + name + "'s satiety: " + hunger + "\n\t" + name
+				+ "'s energy level is " + energy + "\n\t" + name + "'s hygiene: " + hygiene;
 	}
 
 	boolean myPetIsAlive() {
@@ -60,26 +60,42 @@ public class VirtualPet {
 		return false;
 	}
 
-	public String showPicture() {
+	public String showHappyPicture() {
 		return ("\t                      ____\n\t                .---'-    \\\n\t     .-----------/           \\\n\t     /           (         ^  |   __\n\t&   (             \\        O  /  / .'\n\t'._/(              '-'  (.   (_.' /\n\t     \\                    \\     ./\n\t      |    |       |    |/ '._.'\n\t       )   @).____\\|  @ |\n\t   .  /    /       (    |\n\t  \\|, '_:::\\  . ..  '_:::\\ ..\\)\n");
 	}
+
 	Random random = new Random();
-	int i =random.nextInt(exclamatoryMessage.length);
+	int i = random.nextInt(exclamatoryMessage.length);
+
 	public String dangerZone() {
-		if (energy==1 || energy ==2) {return "Oh no!" +name + " is tired.";}
-		if (hygiene==1 || hygiene==2) {return "Oh no!" +name + " is dirty.";}
-		if (interest==1 || interest ==2) {return "Oh no!" + name + " is bored.";}
-		if (hunger==1 || hunger==2) {return "Oh no!" + name + " is hungry.";}
-		else return exclamatoryMessage[i] ;
+		if (energy == 1 || energy == 2) {
+			return "Oh no! " + name + " is tired.";
 		}
-	String causeOfDeath() {
-		if (energy<=0) {return "exhaustion.";}
-		if (hygiene<=0) {return "disease.";}
-		if (interest<=0) {return "boredom.  Yes, it's possible!";}
-		if (hunger <=0) {return "starvation." ;}
-		else return name;
+		if (hygiene == 1 || hygiene == 2) {
+			return "Oh no! " + name + " is dirty.";
 		}
+		if (interest == 1 || interest == 2) {
+			return "Oh no! " + name + " is bored.";
+		}
+		if (hunger == 1 || hunger == 2) {
+			return "Oh no! " + name + " is hungry.";
+		} else
+			return exclamatoryMessage[i];
 	}
-//restart game
-//quit game
-//better warning
+
+	String causeOfDeath() {
+		if (energy <= 0) {
+			return "exhaustion.";
+		}
+		if (hygiene <= 0) {
+			return "disease.";
+		}
+		if (interest <= 0) {
+			return "boredom.  Yes, it's possible!";
+		}
+		if (hunger <= 0) {
+			return "starvation.";
+		} else
+			return name;
+	}
+}
