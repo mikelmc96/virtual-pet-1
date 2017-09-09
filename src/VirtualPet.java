@@ -7,7 +7,7 @@ public class VirtualPet {
 	int hunger = 10;
 	int energy = 10;
 	int hygiene = 10;
-	String[] exclamatoryMessage = { "Great job!", "Excellent!", "Fantastic!", "Right on!", "Alright!" };
+	String[] exclamatoryMessage = { "Great job!", "Excellent!", "Fantastic!", "Cool!", "Awesome!" };
 
 	public String showMenu() {
 		return "What would you like to do? \n\tPress 1 to play with " + name + "\n\tPress 2 to feed " + name
