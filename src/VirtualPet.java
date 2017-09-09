@@ -63,6 +63,12 @@ public class VirtualPet {
 	public String showHappyPicture() {
 		return ("\t                      ____\n\t                .---'-    \\\n\t     .-----------/           \\\n\t     /           (         ^  |   __\n\t&   (             \\        O  /  / .'\n\t'._/(              '-'  (.   (_.' /\n\t     \\                    \\     ./\n\t      |    |       |    |/ '._.'\n\t       )   @).____\\|  @ |\n\t   .  /    /       (    |\n\t  \\|, '_:::\\  . ..  '_:::\\ ..\\)\n");
 	}
+	public String showBathingPicture() {
+		return ("                                 __\n         _,-'`````--.___..----.,'__`---..__\n       ,''                   ,'    `.`.    `.\n     ,''                    /        ` )     \\\n    //                     |          /       \\\n   //                      :         :     __\n---    ---       ---    ---        ---    ---    *          *");
+	}
+	public String showElephantAngelPicture() {
+		return ("\t           /}/}\n\t,         / / }\n\t\\\\   .-=.( (   }\n\t \\'--\"   `\\\\_.---,='\n\t   '-,  \\__/       \\___\n\t   .-'.-.'      \\___.'\n\t  / // /-..___,-`--'\n\t  `\" `\"");
+	}
 
 	Random random = new Random();
 	int i = random.nextInt(exclamatoryMessage.length);
