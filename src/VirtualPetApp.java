@@ -7,7 +7,8 @@ public class VirtualPetApp {
 		VirtualPet myPet = new VirtualPet();
 		myPet.name = "Panchu";
 
-		System.out.println("\t\tWelcome to Virtual Pet!  \n\t" + myPet.name + " the Elephant needs your help!\nHe's just woken up, taken a bath, and had breakfast.  \n\tWhy don't you take him out to play?");
+		System.out.println("\t\tWelcome to Virtual Pet!  \n\t" + myPet.name
+				+ " the Elephant needs your help!\nHe's just woken up, taken a bath, and had breakfast.  \n\tWhy don't you take him out to play?");
 		System.out.println(myPet.showHappyPicture());
 		String userOption;
 		while (myPet.myPetIsAlive() == true) {
@@ -21,33 +22,37 @@ public class VirtualPetApp {
 				myPet.play();
 				myPet.tick();
 				System.out.println(myPet.showPlayingPicture());
-				if (myPet.myPetIsAlive()==true) {
-				System.out.println("Now " + myPet.name + " is excited!");
-				System.out.println(myPet.dangerZone());}
+				if (myPet.myPetIsAlive() == true) {
+					System.out.println("Now " + myPet.name + " is excited!");
+					System.out.println(myPet.dangerZone());
+				}
 				break;
 			case "2":
 				myPet.feed();
 				myPet.tick();
 				System.out.println(myPet.showFoodPicture());
-				if (myPet.myPetIsAlive()==true) {
-				System.out.println("Now " + myPet.name + " is full!");
-				System.out.println(myPet.dangerZone());}
+				if (myPet.myPetIsAlive() == true) {
+					System.out.println("Now " + myPet.name + " is full!");
+					System.out.println(myPet.dangerZone());
+				}
 				break;
 			case "3":
 				myPet.sleep();
 				myPet.tick();
 				System.out.println(myPet.showSleepingPicture());
-				if (myPet.myPetIsAlive()==true) {
-				System.out.println("Now " + myPet.name + " has lots of energy!");
-				System.out.println(myPet.dangerZone());}
+				if (myPet.myPetIsAlive() == true) {
+					System.out.println("Now " + myPet.name + " has lots of energy!");
+					System.out.println(myPet.dangerZone());
+				}
 				break;
 			case "4":
 				myPet.bathe();
 				myPet.tick();
 				System.out.println(myPet.showBathingPicture());
-				if (myPet.myPetIsAlive()==true) {
-				System.out.println("Now " + myPet.name + " is so fresh and so clean!");
-				System.out.println(myPet.dangerZone());}
+				if (myPet.myPetIsAlive() == true) {
+					System.out.println("Now " + myPet.name + " is so fresh and so clean!");
+					System.out.println(myPet.dangerZone());
+				}
 				break;
 			case "5":
 				System.out.println(myPet.showStatus());
