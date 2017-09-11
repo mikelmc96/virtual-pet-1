@@ -3,11 +3,11 @@ import java.util.Random;
 public class VirtualPet {
 
 	public String name;
-	int interest = 10;
+	int interest = 5;
 	int hunger = 10;
 	int energy = 10;
 	int hygiene = 10;
-	String[] exclamatoryMessage = { "Great job!", "Excellent!", "Fantastic!", "Cool!", "Awesome!" };
+	String[] exclamatoryMessage = { "Great job!", "Excellent!", "Fantastic!", "Much better!", "Awesome!" };
 
 	public String showMenu() {
 		return "What would you like to do? \n\tPress 1 to play with " + name + "\n\tPress 2 to feed " + name
@@ -54,7 +54,7 @@ public class VirtualPet {
 	}
 
 	boolean myPetIsAlive() {
-		if (energy > 0 && interest > 0 && energy > 0 && hygiene > 0) {
+		if (hygiene > 0 && interest > 0 && energy > 0 && hunger > 0) {
 			return true;
 		}
 		return false;
@@ -65,6 +65,15 @@ public class VirtualPet {
 	}
 	public String showBathingPicture() {
 		return ("                                 __\n         _,-'`````--.___..----.,'__`---..__\n       ,''                   ,'    `.`.    `.\n     ,''                    /        ` )     \\\n    //                     |          /       \\\n   //                      :         :     __\n---    ---       ---    ---        ---    ---    *          *");
+	}
+	public String showPlayingPicture() {
+		return("      _  _ \\\n     ( \\--,/)\n ,---\\ ` '_/\n/( ___'--/` \n |_|\\ |_|\\");
+	}
+	public String showFoodPicture() {
+		return("      |\n    \\|/|/\n  \\|\\\\|//|/\n   \\|\\|/|/\n    \\\\|//\n     \\|/\n     \\|/\n      |\n_\\|/__|_\\|/____\\|/_");
+	}
+	public String showSleepingPicture() {
+		return("  ()_\n()//__/)_________________()\n||(___)//#/_/#/_/#/_/#()/||\n||----|#| |#|_|#|_|#|_|| ||\n||____|_|#|_|#|_|#|_|#||/||\n||    |#|_|#|_|#|_|#|_||");
 	}
 	public String showElephantAngelPicture() {
 		return ("\t           /}/}\n\t,         / / }\n\t\\\\   .-=.( (   }\n\t \\'--\"   `\\\\_.---,='\n\t   '-,  \\__/       \\___\n\t   .-'.-.'      \\___.'\n\t  / // /-..___,-`--'\n\t  `\" `\"");
