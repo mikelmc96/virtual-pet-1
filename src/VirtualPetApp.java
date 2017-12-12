@@ -4,14 +4,14 @@ public class VirtualPetApp {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		VirtualPet myPet = new VirtualPet();
-		myPet.name = "Panchu";
+		VirtualPet myPet = new VirtualPet("Panchu", 5, 10, 10, 10);
+		
 
 		System.out.println("\t\tWelcome to Virtual Pet!  \n\t" + myPet.name
 				+ " the Elephant needs your help!\nHe's just woken up, taken a bath, and had breakfast.  \n\tWhy don't you take him out to play?");
 		System.out.println(myPet.showHappyPicture());
 		String userOption;
-		while (myPet.myPetIsAlive() == true) {
+		while (myPet.myPetIsAlive()) {
 			do {
 				System.out.println(myPet.showMenu());
 				userOption = input.next();

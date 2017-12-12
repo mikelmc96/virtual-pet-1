@@ -3,10 +3,17 @@ import java.util.Random;
 public class VirtualPet {
 
 	public String name;
-	int interest = 5;
-	int nutrition = 10;
-	int energy = 10;
-	int hygiene = 10;
+	int interest;
+	int nutrition;
+	int energy;
+	int hygiene;
+	public VirtualPet(String name, int interest, int nutrition, int energy, int hygiene) {
+		this.name = name;
+		this.interest = interest;
+		this.nutrition = nutrition;
+		this.energy = energy;
+		this.hygiene = hygiene;
+	}
 
 	public String showMenu() {
 		return "What would you like to do? \n\tPress 1 to play with " + name + "\n\tPress 2 to feed " + name
